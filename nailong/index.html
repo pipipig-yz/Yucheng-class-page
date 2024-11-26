@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hit nailong</title>
+</head>
+<body>
+    <h1>hit the nailong</h1>
+    <h2>the blood of the nailong is <span id="idblood"></span></h2>
+
+    <button type="button" onclick="hitonce()"
+  
+    >hit once</button>
+
+    <button type="button" onclick="squeeze()"
+  
+    >squeeze</button>
+
+    <img id="nailong" src="image/nailong1.png" alt="nailong missing" style="width: 700px; height: auto;">
+
+    <button type="button" onclick="
+    old+=1 ;
+    console.log(`old:${old}`)">plus one old</button>
+
+    <button type="button" onclick="
+    console.log('how old is nailong?');
+    console.log('nailong is 8 years old');"
+    >how old is nailong</button>
+
+    <button type="button" onclick="
+    console.log(typeof old)">
+        type of old
+    </button>
+
+    <button type="button" onclick="
+    console.log(typeof message)">
+        type of message
+    </button>
+
+    <button type="button" onclick="
+    old=0;
+    console.log(`clear the old:${old}`);">
+        reset old
+    </button>
+
+
+
+
+   
+    
+    
+    
+    <script>
+        let hittime=0;
+        let blood=5;
+        document.getElementById("idblood").textContent=blood;
+        let old=0;
+        let message='hello nailong';
+        let from='where is nailong from?';
+
+
+        console.log(from);
+        console.log(old+3);
+        console.log(typeof 0);
+
+        function squeeze(){
+            if (blood>0){
+                document.getElementById("nailong").src="image/nailongs.png";
+            setTimeout(() => {
+                    document.getElementById("nailong").src = "image/nailong1.png" ;
+                }, 300);
+            }
+        }
+    
+
+
+        function hitonce(){
+            if (blood<=0){
+                document.getElementById("nailong").src="image/nailong3.png";
+            }
+            
+            if (blood>0){
+            blood-=1;
+            document.getElementById("idblood").textContent=blood;
+
+            document.getElementById("nailong").src="image/nailong2.png";
+            setTimeout(() => {
+                    document.getElementById("nailong").src = "image/nailong1.png";
+                }, 100);
+
+        
+            }
+
+            
+        }
+    </script>
+</body>
+
+</html>

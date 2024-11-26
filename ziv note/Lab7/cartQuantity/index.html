@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Quantity</title>
+</head>
+<body>
+    <!-- This code demonstrates the use of inline JavaScript to update cart quantity -->
+
+    <h1>Cart Quantity</h1>
+
+    <!-- Button to display the current cart quantity in the console -->
+    <button type="button" onclick="
+    console.log(`Cart Quantity: ${cartQuantity}`);
+    ">Show Quantity</button>
+    <!-- Using backticks (`) instead of single quotes (') allows embedding variables or expressions inside a string -->
+
+    <!-- Button to add 1 item to the cart and display the updated quantity in the console -->
+    <button type="button" onclick="
+    cartQuantity = cartQuantity + 1;
+    console.log(`Cart Quantity: ${cartQuantity}`)
+    ">Add to cart</button>
+
+    <!-- Button to add 2 items to the cart and display the updated quantity in the console -->
+    <button type="button" onclick="
+    cartQuantity += 2;
+    console.log(`Cart Quantity: ${cartQuantity}`)
+    ">+2</button>
+
+    <!-- Button to add 3 items to the cart and display the updated quantity in the console -->
+    <button type="button" onclick="
+    cartQuantity += 3;
+    console.log(`Cart Quantity: ${cartQuantity}`)
+    ">+3</button>
+
+    <!-- Button to reset the cart quantity to 0 and log the reset action in the console -->
+    <button type="button" onclick="
+    cartQuantity = 0;
+    console.log('Cart was reset');
+    console.log(`Cart Quantity: ${cartQuantity}`)
+    ">Reset Cart</button>
+
+    <script>
+        // Initialize cartQuantity with a value of 0
+        let cartQuantity = 0;
+    </script>
+
+    <!-- Added type="button" attribute to all buttons to prevent form submission -->
+
+</body>
+</html>
